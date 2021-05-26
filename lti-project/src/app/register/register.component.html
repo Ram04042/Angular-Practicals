@@ -1,0 +1,103 @@
+<section>
+    <div class="outerContainer">
+        <div class="regfont">
+            <strong style="padding-left: 30px;">Register to explore amazing career opportunities</strong>
+
+        </div>
+
+        <form [formGroup]="regForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="container">
+                <table>
+                    <label for="username"><b>Username</b></label>
+                    <tr>
+                        <td><input id="username" name="username" formControlName="username" type="text" placeholder="Enter Username"></td>
+                        <td>
+                            <div *ngIf="!username?.valid && (username?.dirty ||username?.touched)" id="error-div">
+                                <div [hidden]="!username.errors.required">
+                                    Username is required
+                                </div>
+                                <div [hidden]="!username.errors.minlength">
+                                    Min Length is 5
+                                </div>
+                                <div [hidden]="!username.errors.pattern">
+                                    Special Characters not Allowed
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <label for="password"><b>Password</b></label>
+                    <br>
+                    <tr>
+                        <td><input id="password" name="password" formControlName="password" type="password" placeholder="Enter Password"></td>
+                        <td>
+                            <div *ngIf="!password?.valid && (password?.dirty ||password?.touched)" id="error-div">
+                                <div [hidden]="!password.errors.required">
+                                    Password is required
+                                </div>
+                                <div [hidden]="!password.errors.minlength">
+                                    Min Length 8 required
+                                </div>
+                                <div [hidden]="!password.errors.pattern">
+                                    Atleast one Uppercase,lowercase & Special character
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <label for="email"><b>Email Address</b></label>
+                    <tr>
+                        <td><input id="email" name="email" formControlName="email" type="text" placeholder="Enter Email Address"></td>
+                        <td>
+                            <div *ngIf="!email.valid && (email.dirty ||email.touched)" id="error-div">
+                                <div [hidden]="!email.errors.required">
+                                  Email is required
+                                </div>
+                                <div [hidden]="!email.errors.email">
+                                  invalid email id
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <label for="city"><b>City</b></label>
+                    <tr>
+                        <td><input id="city" name="city" formControlName="city" type="text" placeholder="Enter City"></td>
+                        <td>
+                            <div *ngIf="!city.valid && (city.dirty ||city.touched)" id="error-div">
+                                <div [hidden]="!city.errors.required">
+                                  City is required
+                                </div>
+                                <div [hidden]="!city.errors.pattern">
+                                    Only Characters are Allowed
+                                </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+
+                    <label for="mobileno"><b>Mobile No.</b></label>
+                    <tr>
+                        <td><input id="mobileno" name="mobileno" formControlName="mobileno" type="text" placeholder="Enter Mobile Number"></td>
+                        <td>
+                            <div *ngIf="!mobileno.valid && (mobileno.dirty ||mobileno.touched)" id="error-div">
+                                <div [hidden]="!mobileno.errors.required">
+                                  Mobile No is required
+                                </div>
+                                <div [hidden]="!mobileno.errors.minlength">
+                                    Mobile No must have atleast 10 numbers
+                                </div>
+                                <div [hidden]="!mobileno.errors.pattern">
+                                    Only Numbers are Allowed
+                                </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    
+                    <button type="submit" value="Register" [disabled]="!regForm.valid">Register</button>
+                </table>
+            </div>
+
+        </form>
+    </div>
+</section>

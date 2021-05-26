@@ -1,0 +1,50 @@
+<!-- Toolbar -->
+<div class="header">
+  <img src="favicon.ico">
+  <h1>Angular Tutorials</h1>
+</div>
+<br>
+<br>
+<br><br>
+
+<!-- Comments
+<div>
+  <input type="text">
+</div>
+<br>
+
+<app-register></app-register>
+<br>
+<app-form></app-form>
+ 
+<app-two-way-binding-demo></app-two-way-binding-demo>
+
+<br>
+<app-struct-deriv></app-struct-deriv>
+
+<app-ngswitch></app-ngswitch>
+<app-ngfor></app-ngfor>
+<app-pipes-demo></app-pipes-demo>
+
+
+
+<app-input-demo [abc]="text"></app-input-demo>
+
+<app-output-demo (child) = "message=$event"></app-output-demo>
+
+
+-->
+
+<app-bothside-comp-interac [abc]="text" (child) = "message=$event"></app-bothside-comp-interac>
+{{message}}
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>

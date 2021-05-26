@@ -1,0 +1,6 @@
+Binding Data between ts and html
+
+2 types:
+1 Way Binding
+	i.String interpolation
+	ii.Property Binding

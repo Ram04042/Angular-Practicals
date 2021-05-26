@@ -1,0 +1,49 @@
+<section>
+    <div>
+        <div class="regfont">
+            <strong style="padding-left: 30px; font-size: larger;">Login to a world of opportunities!</strong>
+
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="container">
+                <table>
+                    <label for="username"><b>Username</b></label>
+                    <br>
+                    <tr>
+                        <td><input id="username" name="username" formControlName="username" type="text" placeholder="Enter Username"></td>
+                        <td>
+                            <div *ngIf="!username?.valid && (username?.dirty ||username?.touched)" id="error-div">
+                            <div [hidden]="!username.errors.required">
+                                Username is required
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <label for="password"><b>Password</b></label>
+                    <br>
+                    <tr>
+                        <td><input id="password" name="password" formControlName="password" type="password" placeholder="Enter Password"></td>
+                        <td>
+                            <div *ngIf="!password?.valid && (password?.dirty ||password?.touched)" id="error-div">
+                            <div [hidden]="!username.errors.required">
+                                Password is required
+                            </div>
+                            </div>
+                        </td>
+                        </tr>
+                </table>
+                
+                <input [disabled]="!loginForm.valid" type="submit" value="Login">
+                <br>
+                <input id="rememberme" name="rememberme" formControlName="rememberme" type="checkbox"> Remember me
+                <div class="resetdiv">
+                    <input type="reset" value="Cancel" style="float: left;" class="resetbtn">
+                    <p style="float: right;"> Forgot <a href=""> password?</a> </p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>

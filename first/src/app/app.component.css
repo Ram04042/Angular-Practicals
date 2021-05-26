@@ -1,0 +1,14 @@
+img
+  {
+    padding-top: 15px;
+  }
+  img,h1
+  {
+    float:left;
+    padding-left: 10px;
+  }
+
+  #header
+  {
+      width:100%;
+  }

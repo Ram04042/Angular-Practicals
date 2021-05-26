@@ -1,0 +1,12 @@
+<p>struct-deriv works!</p>
+
+<input type="text"[(ngModel)]="num">
+
+<div *ngIf="num%2===0; then even else odd">Hii this is ngif</div>
+
+
+<ng-template #even>The Number is Even</ng-template>
+
+<ng-template #odd>This Number is Odd</ng-template>
+
+<ng-template><p>This is ng temp</p></ng-template>

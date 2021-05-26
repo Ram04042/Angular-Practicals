@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="shadow">
+                        <div class="card-header">
+                            <h3>User Registration</h3>
+                        </div>
+                        <div class="card-body">
+                            
+                            <form [formGroup]="regForm" (ngSubmit)="submitForm()" novalidate>
+                                <div class="form-group">
+                                    <label for="name1" class="tcolor">First Name</label>
+                                    <input type="text" [ngClass]="{'alert-class-error': Name.errors && (Name.touched || Name.dirty), 'is-valid':Name.valid}" formControlName="Name" class="form-control form-control-lg rounded-0" name="name1">
+                                    <div *ngIf="!Name.valid && (Name.dirty ||Name.touched)" id="error-div">
+                                        <div [hidden]="!Name.errors.required">
+                                          Name is required
+                                        </div>
+                                        <div [hidden]="!Name.errors.pattern">
+                                            Only Characters are Allowed
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name2" class="tcolor">Last Name</label>
+                                    <input type="text" class="form-control form-control-lg rounded-0" name="name2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="tcolor">Email</label>
+                                    <input type="email" formControlName="Email_ID" class="form-control form-control-lg rounded-0" name="email">
+                                    <div *ngIf="!Email_ID.valid && (Email_ID.dirty ||Email_ID.touched)" id="error-div">
+                                        <div [hidden]="!Email_ID.errors.required">
+                                          Email is required
+                                        </div>
+                                        <div [hidden]="!Email_ID.errors.email">
+                                          invalid email id
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob" class="tcolor">Date Of Birth</label>
+                                    <input type="date" formControlName="DOB"class="form-control form-control-lg rounded-0" name="dob">
+                                    <div *ngIf="!DOB.valid && (DOB.dirty ||DOB.touched)" id="error-div">
+                                        <div [hidden]="!Name.errors.required">
+                                          DOB is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact" class="tcolor">Contact Number</label>
+                                    <input type="text" formControlName="Phone_No" class="form-control form-control-lg rounded-0" name="contact">
+                                    <div *ngIf="!Phone_No.valid && (Phone_No.dirty ||Phone_No.touched)" id="error-div">
+                                        <div [hidden]="!Phone_No.errors.required">
+                                          Mobile No is required
+                                        </div>
+                                        <div [hidden]="!Phone_No.errors.minlength">
+                                            Mobile No must have atleast 10 numbers
+                                        </div>
+                                        <div [hidden]="!Phone_No.errors.pattern">
+                                            Only Numbers are Allowed
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add" class="tcolor">Address</label>
+                                    <input type="text" formControlName="Address" class="form-control form-control-lg rounded-0" name="add">
+                                    <div *ngIf="!Address.valid && (Address.dirty ||Address.touched)" id="error-div">
+                                        <div [hidden]="!Address.errors.required">
+                                          Address is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd1" class="tcolor">Password</label>
+                                    <input type="password" formControlName="Password" class="form-control form-control-lg rounded-0" name="pwd1">
+                                    <div *ngIf="!Password?.valid && (Password?.dirty ||Password?.touched)" id="error-div">
+                                        <div [hidden]="!Password.errors.required">
+                                            Password is required
+                                        </div>
+                                        <div [hidden]="!Password.errors.minlength">
+                                            Min Length 8 required
+                                        </div>
+                                        <div [hidden]="!Password.errors.pattern">
+                                            Atleast one Uppercase,lowercase & Special character
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd1" class="tcolor">Confirm Password</label>
+                                    <input type="password" class="form-control form-control-lg rounded-0" name="pwd1"> 
+                                </div>
+                                <div >
+                                    <button type="submit" class="btn btn-success btn-lg" id="btnLogin"[disabled]="!regForm.valid">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

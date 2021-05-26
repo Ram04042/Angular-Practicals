@@ -1,0 +1,22 @@
+<table class="table">
+  
+  <tr *ngFor="let contact of contactList; index as i">
+    <td>{{contact.firstname}} {{contact.lastname}}</td>
+    <td>{{contact.mobileNo}}</td>
+    <input type="hidden" value={{i}}>
+    <td><button (click)="deleteContact(i)"><span class="glyphicon glyphicon-trash"></span></button></td>
+  </tr>
+</table>
+
+<button (click)="addContact()">Add</button>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>

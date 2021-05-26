@@ -1,0 +1,17 @@
+table,th,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 500px;
+
+}
+
+.tableHead
+{
+    background-color: rgb(27, 160, 27);
+    color: white;
+}
+
+.even{background-color: rgb(173, 173, 173);}
+
+.odd{background-color: lemonchiffon;}

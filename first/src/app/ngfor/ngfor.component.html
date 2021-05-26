@@ -1,0 +1,43 @@
+<p>ngfor works!</p>
+<ul *ngFor="let c of colors; index as i">
+    <li>{{c}} = {{i}}</li>
+</ul>
+
+<ol>
+    <ng-container *ngFor="let c of colors; first as f">
+        <li>{{c}} = {{f}}</li>
+    </ng-container>
+</ol>
+
+<ol>
+    <li *ngFor="let c of colors; even as e">{{c}} = {{e}}</li>
+</ol>
+
+<table>
+    <tr *ngFor="let c of colors; even as e">
+        <td [style.background-color] = "e?'gray':'red'">{{c}}</td>
+    </tr>
+</table>
+
+<select >
+    <option [selected]="c=='Green'" *ngFor="let c of colors; even as e">{{c}}</option>
+</select>
+
+<table>
+    <tr [class]="f?'tableHead': e?'even':'odd' " *ngFor="let list of students; first as f; even as e">
+        <td *ngFor="let element of list">{{element}}</td>
+    </tr>
+</table>
+
+<br>
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    <tr [class]="e?'even':'odd' " *ngFor="let dept of departments; even as e">
+        <td>{{dept.id}}</td>
+        <td>{{dept.name}}</td>
+    </tr>
+</table>

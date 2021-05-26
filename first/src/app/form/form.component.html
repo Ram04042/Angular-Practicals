@@ -1,0 +1,13 @@
+<p>form works!</p>
+<h1 [style] = "status?pstyle1:pstyle2">{{Message}} {{Message2}} {{sum}}</h1>
+
+<input (click)="changeStatus()" [value]="val3" type="button">
+
+<input [value]="status?val1:val2" type="text">
+<input [value]="val1" type="text" [hidden]="status">
+
+<p [class] = "successClass">Demo Para</p>
+<p [style.color] ="haserror ? 'red':'green'">Has Error</p>
+<p [style.color] = "'Green'">Another Demo</p>
+
+{{name}}

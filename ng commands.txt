@@ -1,0 +1,17 @@
+//Creates New Project
+ng new proj_name 
+=
+=>Routing yes
+=>CSS
+
+//Compile Project and run on 
+ng serve -o
+
+//create new component
+ng g c register
+
+//create new class
+ng g class Model/Department
+
+
+

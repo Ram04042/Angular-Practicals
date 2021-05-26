@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="shadow">
+                        <div class="card-header">
+                            <h3>User Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center " ><img src="assets/images/avatarlogoblue.png" alt="avatar"></div>
+                            <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+                                <div class="form-group">
+                                    <label for="uname1" class="tcolor">Email</label>
+                                    <input type="text" formControlName="Email_ID" class="form-control form-control-lg rounded-0" name="Email_ID">
+                                    <div *ngIf="!Email_ID?.valid && (Email_ID?.dirty ||Email_ID?.touched)" id="error-div">
+                                        <div [hidden]="!Email_ID.errors.required">
+                                            Username is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd1" class="tcolor">Password</label>
+                                    <input type="text" formControlName="Password" class="form-control form-control-lg rounded-0" name="Password">
+                                    <div *ngIf="!Password?.valid && (Password?.dirty ||Password?.touched)" id="error-div">
+                                        <div [hidden]="!Password.errors.required">
+                                            Password is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" formControlName="rememberme" class="custom-control-indicator">
+                                    <span class="custom-control-description medium text-dark"> Remember me</span>
+                                    </label>
+                                </div>
+                                <div >
+                                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success btn-lg" id="btnLogin">Login</button>
+                                </div>
+                                <p></p>
+                                <div class="container">
+                                    <button type="button" class="cancelbtn">Cancel</button>
+                                    <span class="psw">Forgot <a href="ForgetPwd">password?</a></span>
+                                </div>
+                                <div class="text-center p-3">
+                                    Need an account ? <a href="register">Register</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

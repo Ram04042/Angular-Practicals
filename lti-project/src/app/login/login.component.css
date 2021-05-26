@@ -1,0 +1,127 @@
+
+div {
+    background-color: rgb(255, 255, 255);
+}
+
+section div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+article {
+    height: 300px;
+}
+
+article div {
+    text-align: center;
+}
+
+article p {
+    height: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    margin: 15px;
+    padding-top: 5px;
+}
+
+.regfont {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: larger;
+    margin: auto;
+}
+.container {
+    width: 20%;
+    text-align: left;
+    /* padding-top: 30px; */
+    /* padding-left: 80px; */
+    margin: auto;
+    top: 50%;
+    left: 50%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number] {
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: solid;
+    border-radius: 2.5px;
+    border-width: 2px;
+    border-color: rgb(202, 198, 202);
+    background: rgb(255, 255, 255);
+}
+
+input[type=submit] {
+    height: 41px;
+    width: 266px;
+    margin: 5px 0 5px 0;
+    border: solid;
+    border-radius: 2.5px;
+    color: white;
+    border-color: rgb(0, 8, 144);
+    background: rgb(0, 8, 144);
+}
+
+input[type=submit]:disabled {
+
+    height: 41px;
+    width: 266px;
+    margin: 5px 0 5px 0;
+    border: solid;
+    border-radius: 2.5px;
+    color: white;
+    border-color: gray;
+    background: gray;
+
+}
+
+
+.resetdiv {
+    height: 50px;
+    width: 240px;
+    padding-top: 15px;
+    background-color: rgb(242, 241, 242);
+}
+
+.resetdiv a {
+    text-decoration: underline;
+    color: black;
+}
+
+.resetbtn {
+    height: 40px;
+    width: 70px;
+    margin: 5px 0 5px 0;
+    border: solid;
+    border-radius: 2.5px;
+    color: white;
+    border-color: rgb(255, 83, 53);
+    background: rgb(255, 83, 53);
+}
+
+
+#error-div
+{
+    padding-top: 5px;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+#error-div div
+{
+    float: right;
+    width: 300px;
+    height: 25px;
+    padding-top: 0px;
+    color: red;
+    font-weight: bold;
+
+}
